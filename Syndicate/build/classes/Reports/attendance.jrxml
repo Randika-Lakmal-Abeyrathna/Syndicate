@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SyndicateReportTemplate" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b228d354-ff93-43bb-b0ec-92867b0e0ad1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="numbers" class="java.lang.String"/>
+	<parameter name="details by" class="java.lang.String"/>
+	<field name="Employee ID" class="java.lang.String"/>
+	<field name="Employee Name" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="In Time" class="java.lang.String"/>
+	<field name="Out Time" class="java.lang.String"/>
+	<field name="Hours" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="555" height="98" uuid="83bd63f9-864f-4982-a3d3-9e650b7b38fb"/>
+				<imageExpression><![CDATA["C:\\Users\\USER\\Desktop\\Final\\Final Project\\Syndicate\\src\\Reports\\images\\ReportTemplate.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="106" y="42" width="100" height="20" uuid="f90a1e05-6839-4cc1-8dc4-59b96238d2a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Email Address ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="42" width="100" height="20" uuid="3a5b5729-6a65-4279-8df2-6661c3691530"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Mobile Numbers]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="95" y="62" width="165" height="20" uuid="02091af7-69b0-4177-9290-2c80da113422"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="62" width="100" height="20" uuid="21a0a050-0dff-4b41-afc9-34e8aaa6b8b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{numbers}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="8e7c50ff-4f32-467f-b8a9-19aef50a0543"/>
+			</line>
+			<staticText>
+				<reportElement x="156" y="1" width="265" height="34" uuid="48e8f599-ce8f-4eed-a171-69c6d6120ca9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Attendance Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="68" height="20" backcolor="#999999" uuid="8e41b8ab-acb3-4800-b5e3-660a0bd80e70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="41" width="138" height="20" backcolor="#999999" uuid="0a7f3e07-de96-41a5-91c6-458e94469d37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="206" y="41" width="114" height="20" backcolor="#999999" uuid="5cee20f5-da23-4d9e-a81a-36bafb9d790f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="41" width="83" height="20" backcolor="#999999" uuid="db4b4cf5-1ea8-46c3-8ed8-95426f9b66ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[In Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="41" width="80" height="20" backcolor="#999999" uuid="664985dd-03ad-4cb1-83aa-56762e94eced"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Out Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="41" width="69" height="20" backcolor="#999999" uuid="308a3240-be01-48fe-a3dd-b693c41f1a1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hours]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="60" width="555" height="1" uuid="9923e329-339d-43ca-9735-41cac8093bb8"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="68" height="20" uuid="f0e19e6c-8097-48fb-95bd-7834107b7e4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Employee ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="68" y="0" width="138" height="20" uuid="3219df75-c6d1-4469-bf7f-aa54534b0a50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Employee Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="0" width="114" height="20" uuid="3cabf43e-eeed-49b9-a919-6223da915f18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="83" height="20" uuid="c3030583-1463-403c-acd1-1bd5b044a10d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{In Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="80" height="20" uuid="e5ba71a8-5c23-4e79-ab2d-6b01e2d4a87c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Out Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="69" height="20" uuid="55a271ad-2e1b-481c-b734-c4b5354a4321"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Consolas" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Hours}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="34" width="100" height="20" uuid="6fed8619-5a79-4600-9da3-50858eae08e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="34" width="34" height="20" uuid="a4ca00c5-6504-4d5f-97fa-c1f82cb98466"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Page :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

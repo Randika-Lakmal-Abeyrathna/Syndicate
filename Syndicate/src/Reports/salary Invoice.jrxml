@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salary Invoice" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3add44f-45bb-416c-acec-f8552c147ff0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="numbers" class="java.lang.String"/>
+	<parameter name="details by" class="java.lang.String"/>
+	<field name="Invoice ID" class="java.lang.String"/>
+	<field name="Emp Name" class="java.lang.String"/>
+	<field name="Attendance" class="java.lang.String"/>
+	<field name="Leaves" class="java.lang.String"/>
+	<field name="payment" class="java.lang.String"/>
+	<field name="Basic Salary" class="java.lang.String"/>
+	<field name="Etf / Epf" class="java.lang.String"/>
+	<field name="Month Salary" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="98" uuid="1dae0ecb-8ccb-4dae-a3ef-dea259e269b3"/>
+				<imageExpression><![CDATA["C:\\Users\\USER\\Desktop\\Final\\Final Project\\Syndicate\\src\\Reports\\images\\ReportTemplate.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="89" y="44" width="100" height="20" uuid="ade82f2c-afa8-4750-a203-56a217eb1e84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Email ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="44" width="100" height="20" uuid="d480659f-6e03-4648-bb45-e0f7db49aff5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Numbers]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="89" y="64" width="100" height="20" uuid="e0c4ace8-a867-4a5f-be5f-6a07fa0762d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="64" width="113" height="20" uuid="92cd6bd5-fda1-4da9-a723-4f35fbb20d13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{numbers}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="155" y="1" width="265" height="34" uuid="daaa1223-fd48-4be2-bec9-7776f2544681"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Salary Invoice Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="20" uuid="7b67969b-b62b-4d1a-841f-c133ce3fa428"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Details By :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="10" width="455" height="20" uuid="3b135dfb-8dab-422f-8b07-84b43e8a83c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{details by}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="41" width="51" height="20" uuid="08fcbfb3-a311-4854-8dc1-b0c023a8a810"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="41" width="81" height="20" uuid="a5210b86-a4f2-460b-99ec-37b050e7b39f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Emp Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="41" width="62" height="20" uuid="f3f5152a-9981-421d-8c09-9282b56a8bbe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attendance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="41" width="40" height="20" uuid="b5e26a88-e6d7-4555-9a01-94f66794a1e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Leaves]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="41" width="48" height="20" uuid="307211d2-4b36-4bac-ac9e-7913b67415f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="41" width="69" height="20" uuid="aab192a2-4781-4dad-a1e9-6fe3c97b3d5e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Basic Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="41" width="61" height="20" uuid="60d5268e-e012-428d-8ce3-94f03f4078c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Etf / Epf]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="41" width="74" height="20" uuid="09921e2c-c4d5-4da5-bf93-f8fc661a6b85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Month Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="41" width="69" height="20" uuid="5b5911df-c99a-4918-9e57-a423f5300809"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="60" width="555" height="1" uuid="57d14a93-d15e-4939-b1e1-ad6ff657716e"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="51" height="20" uuid="284d4b31-63aa-4173-b4c0-61599c3ac0e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Invoice ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="81" height="20" uuid="4cef2403-a99d-473d-b6c9-1b98f54a1c17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Emp Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="62" height="20" uuid="6b8f030b-530c-4b58-a3cd-6b766dece0b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Attendance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="40" height="20" uuid="79b6c0af-9e87-43a4-a1c9-b2b431ef2ae7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Leaves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="48" height="20" uuid="d69741ee-1d8a-4e14-9788-7034f610a109"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{payment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="0" width="69" height="20" uuid="2b467f8b-52af-4fc5-83e1-aee8e85c3d4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Basic Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="61" height="20" uuid="134a9c69-6a05-4a72-bbce-1435e95f590b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Etf / Epf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="0" width="74" height="20" uuid="806abca4-7ebd-4d58-bab4-8d4091b75872"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Month Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="69" height="20" uuid="03e7d62e-fd22-45c0-95ae-0731fb44c242"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="51" height="20" uuid="73f759f1-8575-41f4-8646-9c8cf4e5e222"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Pages :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="51" y="22" width="100" height="20" uuid="e7193749-9ac2-4fa2-8d77-8bd6c0d22803"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
